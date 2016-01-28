@@ -18,8 +18,9 @@ public class Student{
         public Student() {
         }
 
-        public Student(String name, String gender, double grade) {
+        public Student(String name, String id, String gender, double grade) {
             this.name = name;
+            this.id=id;
             this.gender = gender;
             this.grade = grade;
         }
@@ -71,10 +72,12 @@ public class Student{
                 return false;
             }
         }
-        public String toString(Student s)
+        
+        //public String toString(Student s)
+        @Override
+        public String toString()
         {
-            
-            return "{\"name\":\""+s.getName()+"\",\"id\":\""+s.getId()+"\",\"gender\":\""+s.getGender()+"\",\"grade\":"+s.getGrade()+"}";
+            return "{\"name\":\""+this.getName()+"\",\"id\":\""+this.getId()+"\",\"gender\":\""+this.getGender()+"\",\"grade\":"+this.getGrade()+"}";
         }
 }
 
